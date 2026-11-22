@@ -1,0 +1,87 @@
+<!doctype html>
+<html lang="uk">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="description" content="Інформація про інтернет-провайдера.">
+  <title>ISPCheck — Інформація про оператора</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Nunito:wght@400;500;600;700&family=Roboto:wght@400;500;700;900&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="css/style.css">
+  <link rel="stylesheet" href="css/isp-info.css">
+</head>
+<body class="isp-page">
+  <header class="site-header">
+    <a class="brand" href="index.html" aria-label="ISPCheck — головна">ISPCheck</a>
+    <a class="header-pill report-link" href="#">
+      <span class="icon-info" aria-hidden="true">i</span>
+      <span>Повідомити про помилку</span>
+    </a>
+    <div class="provider-search header-provider-search" data-provider-search>
+      <form class="header-search" role="search" action="isp-info.html" method="get">
+        <label class="visually-hidden" for="isp-search">Знайти оператора</label>
+        <input id="isp-search" type="search" name="q" placeholder="Знайти оператора"
+          autocomplete="off" data-provider-input aria-autocomplete="list"
+          aria-expanded="false" aria-controls="isp-search-results">
+        <button class="search-submit" type="submit" aria-label="Знайти оператора">
+          <svg viewBox="0 0 24 24" aria-hidden="true"><circle cx="10.8" cy="10.8" r="6.4"></circle><path d="m16 16 4.2 4.2"></path></svg>
+        </button>
+      </form>
+      <div class="search-results" id="isp-search-results" data-provider-results role="listbox" hidden></div>
+    </div>
+    <a class="header-pill operator-link" href="#"><span aria-hidden="true">⌁</span><span>Для оператора</span></a>
+    <a class="header-pill account-link" href="#">
+      <svg viewBox="0 0 24 24" aria-hidden="true"><circle cx="12" cy="8" r="3.2"></circle><path d="M5.8 19c.5-3.1 2.7-4.8 6.2-4.8s5.7 1.7 6.2 4.8"></path></svg>
+      <span>Кабінет</span>
+    </a>
+  </header>
+
+  <main class="isp-content" data-provider-detail>
+    <h1>Інформація про оператора</h1>
+    <p class="provider-load-status" id="provider-load-status" role="status" aria-live="polite">Завантаження інформації…</p>
+
+    <section class="provider-overview" aria-labelledby="provider-name">
+      <div class="provider-visual">
+        <div class="logo-placeholder" role="img" aria-label="Місце для логотипа оператора">
+          <svg viewBox="0 0 160 160" aria-hidden="true">
+            <rect x="34" y="20" width="92" height="120" rx="12"></rect>
+            <circle cx="99" cy="54" r="13"></circle>
+            <path d="m43 119 28-30 18 18 13-14 16 26"></path>
+          </svg>
+        </div>
+        <div class="rating-row">
+          <strong>—</strong>
+          <span class="rating-note">Рейтинг ще не сформовано</span>
+        </div>
+      </div>
+
+      <div class="provider-description">
+        <h2 id="provider-name" data-provider-name>Так.нет</h2>
+        <p data-provider-description>Завантаження інформації про оператора…</p>
+        <dl class="provider-facts">
+          <div><dt>Технології</dt><dd data-provider-types>—</dd></div>
+          <div><dt>Максимальна швидкість</dt><dd data-provider-speed>—</dd></div>
+          <div><dt>Вебсайт</dt><dd data-provider-website>—</dd></div>
+          <div><dt>Телефон</dt><dd data-provider-phone>—</dd></div>
+        </dl>
+        <a class="compare-button" href="map.html">
+          <span aria-hidden="true">☷</span> Перевірити покриття на мапі
+        </a>
+      </div>
+    </section>
+
+    <section class="review-section" aria-labelledby="review-title">
+      <h2 id="review-title">Є що сказати?</h2>
+      <p>Ви можете залишити відгук про оператора нижче</p>
+      <div class="review-form">
+        <label class="visually-hidden" for="review">Текст відгуку</label>
+        <textarea id="review" name="review" placeholder="Введіть текст..."></textarea>
+        <button class="send-button" type="button" disabled title="Надсилання відгуків буде реалізовано окремо">Надіслати</button>
+      </div>
+    </section>
+  </main>
+  <script src="js/site.js" defer></script>
+  <script src="js/provider.js" defer></script>
+</body>
+</html>
