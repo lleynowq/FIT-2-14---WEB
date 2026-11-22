@@ -1,0 +1,51 @@
+<!doctype html>
+<html lang="uk">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="description" content="ISPCheck — інформація про покриття інтернет-провайдерів у Києві.">
+  <title>ISPCheck — Головна</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Nunito:wght@400;500;600;700&family=Roboto:wght@400;500;700;900&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="css/style.css">
+  <link rel="stylesheet" href="css/main.css">
+</head>
+<body class="home-page">
+  <header class="site-header">
+    <a class="brand" href="index.html" aria-label="ISPCheck — головна">ISPCheck</a>
+
+    <a class="header-pill report-link" href="#" aria-label="Повідомити про помилку">
+      <span class="icon-info" aria-hidden="true">i</span>
+      <span>Повідомити про помилку</span>
+    </a>
+
+    <div class="provider-search header-provider-search" data-provider-search>
+      <form class="header-search" role="search" action="isp-info.html" method="get">
+        <label class="visually-hidden" for="site-search">Знайти оператора</label>
+        <input id="site-search" type="search" name="q" placeholder="Знайти оператора"
+          autocomplete="off" data-provider-input aria-autocomplete="list"
+              aria-expanded="false" aria-controls="site-search-results">
+        <button class="search-submit" type="submit" aria-label="Знайти оператора">
+          <svg viewBox="0 0 24 24" aria-hidden="true"><circle cx="10.8" cy="10.8" r="6.4"></circle><path d="m16 16 4.2 4.2"></path></svg>
+        </button>
+      </form>
+      <div class="search-results" id="site-search-results" data-provider-results role="listbox" hidden></div>
+    </div>
+
+    <a class="header-pill operator-link" href="#">
+      <span aria-hidden="true">⌁</span><span>Для оператора</span>
+    </a>
+    <a class="header-pill account-link" href="#">
+      <svg viewBox="0 0 24 24" aria-hidden="true"><circle cx="12" cy="8" r="3.2"></circle><path d="M5.8 19c.5-3.1 2.7-4.8 6.2-4.8s5.7 1.7 6.2 4.8"></path></svg>
+      <span>Кабінет</span>
+    </a>
+  </header>
+
+  <main class="home-main">
+    <h1>ISPCheck</h1>
+    <a class="map-cta" href="map.html">Перейти до мапи</a>
+  </main>
+  <script src="js/site.js" defer></script>
+</body>
+</html>
